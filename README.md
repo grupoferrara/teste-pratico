@@ -1,4 +1,4 @@
-# Teste Prático: Sistema de Cotação para Tradução com OCR e Dados do Cliente
+# Teste Prático: Sistema de Cotação com OCR e Dados do Cliente
 
 ## Objetivo
 Desenvolver uma aplicação web que permita aos usuários fazer upload de fotos de documentos para extração de texto via OCR, selecionar idiomas de origem e destino, e obter uma cotação para o serviço de tradução. Os usuários também devem fornecer suas informações de contato, incluindo nome, e-mail e número de WhatsApp, este último com uma máscara de entrada adequada.
@@ -49,5 +49,15 @@ Desenvolver uma aplicação web que permita aos usuários fazer upload de fotos 
 Os requisitos de front-end não são obrigatórios, pode desenvolver no que se sentir mais confortável e produtivo.
 
 **Importante: O projeto deve seguir a arquitetura MVC.**
+
+Caso opte por não usar Laravel, não tem problema algum usar componentes que facilite a conexão com banco de dados e etc.
+
+Aqui está alguns componentes que recomendo e que podem ajudar:
+
+- Abstração de Banco de dados: https://github.com/robsonvleite/datalayer
+- Rotas: https://github.com/robsonvleite/router
+- Upload de arquivos: https://github.com/robsonvleite/uploader ou usar o **SDK da AWS** e já fazer upload em um bucket no S3 🙂
+
+Boa sorte 😉
 
 ---
