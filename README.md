@@ -1,5 +1,8 @@
 # Teste Prático: Sistema de Cotação com OCR e Dados do Cliente
 
+## Protótipo
+O layout a ser seguido está disponível no figma: https://www.figma.com/file/PwVm08xwcflTXJx4ziBkx0/UI?type=design&node-id=0%3A1&mode=dev
+
 ## Objetivo
 Desenvolver uma aplicação web que permita aos usuários fazer upload de fotos de documentos para extração de texto via OCR, selecionar idiomas de origem e destino, e obter uma cotação para o serviço de tradução. Os usuários também devem fornecer suas informações de contato, incluindo nome, e-mail e número de WhatsApp, este último com uma máscara de entrada adequada.
 
