@@ -18,7 +18,7 @@ Desenvolver uma aplicação web que permita aos usuários fazer upload de fotos 
 
 ### Upload e Análise de Documentos
 - Permitir que os usuários façam upload de imagens de documentos.
-- O formulário deverá aceitar apenas esses tipos de documentos: PNG, JPG, PDF, DOC, DOCX, XLS, XLSX
+- Permitir apenas esses tipos de documentos: PNG, JPG, PDF, DOC, DOCX, XLS, XLSX
 - Utilizar OCR para extrair o texto das imagens.
 - Contar o número de palavras do texto extraído.
 
