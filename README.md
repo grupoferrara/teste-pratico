@@ -1,4 +1,4 @@
-# Teste Prático para Desenvolvedor FullStack no Grupo Ferrara: Sistema de Cotação com OCR e Dados do Cliente
+# Teste Prático para Desenvolvedor Full Stack no Grupo Ferrara: Sistema de Cotação com OCR e Dados do Cliente
 
 ## Protótipo
 O layout a ser seguido está disponível no figma: https://www.figma.com/file/PwVm08xwcflTXJx4ziBkx0/UI?type=design&node-id=0%3A1&mode=dev
