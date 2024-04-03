@@ -11,6 +11,7 @@ Desenvolver uma aplicação web que permita aos usuários fazer upload de fotos 
 ### Formulário de Informações do Usuário
 - Incluir campos para o usuário inserir seu **nome**, **e-mail** e **número de WhatsApp**.
 - Implementar validações para garantir que os dados inseridos estão no formato correto.
+- O select de idioma de origem e destino devem conter os idiomas: Português, Inglês e Italiano. Sendo que o usuário sempre tem que selecionar o Português como um par de idioma, ou seja, não deixar selecionar Italiano > Inglês por exemplo.
 
 ### Máscara de Entrada para o WhatsApp
 - Aplicar uma máscara de entrada no campo do WhatsApp para formatar automaticamente os números de telefone conforme o padrão internacional.
