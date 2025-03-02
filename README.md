@@ -1,68 +1,93 @@
-# Teste Prático para Desenvolvedor Full Stack no Grupo Ferrara: Sistema de Cotação com OCR e Dados do Cliente
+# 🏆 **Desafio Técnico – Laravel 12 + Livewire + Tailwind CSS**
 
-## Protótipo
-O layout a ser seguido está disponível no figma: https://www.figma.com/file/PwVm08xwcflTXJx4ziBkx0/UI?type=design&node-id=0%3A1&mode=dev
+## 🎯 **Objetivo**
+Criar uma aplicação web utilizando **Laravel 12, Livewire e Tailwind CSS** que permita aos usuários:
+- Fazer **upload de imagens de documentos** para extração de texto via **OCR**.
+- Selecionar **idiomas de origem e destino** para cotação de tradução.
+- **Calcular e exibir um preço estimado** baseado no número de palavras extraídas.
+- **Armazenar os pedidos** no banco de dados.
 
-## Objetivo
-Desenvolver uma aplicação web que permita aos usuários fazer upload de fotos de documentos para extração de texto via OCR, selecionar idiomas de origem e destino, e obter uma cotação para o serviço de tradução. Os usuários também devem fornecer suas informações de contato, incluindo nome, e-mail e número de WhatsApp, este último com uma máscara de entrada adequada.
+---
 
-## Funcionalidades Detalhadas
+## 📌 **Requisitos Técnicos**
+### 🔹 **Stack do projeto**
+- Laravel **12** com **Livewire**
+- Tailwind CSS
+- PostgreSQL ou MySQL
+- Laravel Herd ou Docker (para desenvolvimento local)
+- Biblioteca de OCR (Google Cloud Vision ou Amazon Textract)
+- Máscara para telefone usando **[International Telephone Input](https://intl-tel-input.com/)**
 
-### Formulário de Informações do Usuário
-- Incluir campos para o usuário inserir seu **nome**, **e-mail** e **número de WhatsApp**.
-- Implementar validações para garantir que os dados inseridos estão no formato correto.
-- O select de idioma de origem e destino devem conter os idiomas: Português, Inglês e Italiano. Sendo que o usuário sempre tem que selecionar o Português como um par de idioma, ou seja, não deixar selecionar Italiano > Inglês por exemplo.
+---
 
-### Máscara de Entrada para o WhatsApp
-- Aplicar uma máscara de entrada no campo do WhatsApp para formatar automaticamente os números de telefone conforme o padrão internacional.
-- A máscara deve ser flexível para acomodar diferentes formatos de números de telefone de países ao redor do mundo.
+## 📝 **Funcionalidades**
+### 🔹 **Formulário de Informações do Usuário**
+- Campos obrigatórios:
+  - **Nome**
+  - **E-mail**
+  - **Número de WhatsApp** (com máscara)
+- **Validações**:
+  - Nome: obrigatório
+  - E-mail: obrigatório e válido
+  - WhatsApp: obrigatório e formatado corretamente
+- **Seleção de idiomas de origem e destino**:
+  - Opções: **Português, Inglês, Italiano**.
+  - **Regra**: O usuário **sempre** deve selecionar **Português** como um dos idiomas (ex.: **Português → Inglês**, **Português → Italiano**).
 
-### Upload e Análise de Documentos
-- Permitir que os usuários façam upload de imagens de documentos.
-- Permitir apenas esses tipos de documentos: PNG, JPG, PDF, DOC, DOCX, XLS, XLSX
-- Utilizar OCR para extrair o texto das imagens.
-- Contar o número de palavras do texto extraído.
+---
 
-### Cálculo e Exibição de Preço
-- Após a contagem de palavras, multiplicar o número total pelo preço por palavra, que deve ser definido como:
-  - Para traduções de Italiano: R$ 0,25 por palavra.
-  - Para traduções de Inglês: R$ 0,20 por palavra.
-- Exibir o preço estimado na tela para o usuário.
+### 🔹 **Upload e OCR**
+- **Upload via Livewire**
+- Arquivos aceitos: **PNG, JPG, PDF, DOC, DOCX, XLS, XLSX**
+- Após o envio:
+  - Aplicar **OCR** para extrair o texto do documento.
+  - Contar **número de palavras** do texto extraído.
 
-### Armazenamento de Dados
-- Armazenar informações sobre cada pedido, incluindo dados do usuário, detalhes do documento e cotação, no banco de dados.
+---
 
-## Requisitos Técnicos Adicionais
+### 🔹 **Cálculo do Preço da Tradução**
+- Preço por palavra:
+  - **Inglês:** R$ 0,20
+  - **Italiano:** R$ 0,25
+- Exibir dinamicamente o valor total baseado no número de palavras extraídas.
 
-- **Validação de Dados:** Garantir que todos os campos do formulário sejam validados adequadamente.
+---
 
-## Desafios de Implementação
+### 🔹 **Armazenamento no Banco de Dados**
+- Criar **migration** para armazenar:
+  - Nome, e-mail, WhatsApp.
+  - Idioma de origem e destino.
+  - Caminho do arquivo enviado.
+  - Texto extraído pelo OCR.
+  - Número de palavras e valor calculado.
 
-- **Interface de Usuário Intuitiva:** Criar uma interface clara e fácil de usar, orientando o usuário através do processo de forma intuitiva. PS. Design não será avaliado
-- **Flexibilidade da Máscara de Entrada:** Implementar uma máscara de entrada para o WhatsApp que aceite e formate números de diferentes países.
-- **Extração de texto usando OCR:** Utilizar uma biblioteca ou API de OCR (como Tesseract, Google Cloud Vision API, Amazon Textract ou similar) para extrair texto de imagens de documentos enviados pelos usuários.
+---
 
+## 🚀 **Desafios Extras (Diferencial)**
+✅ Criar **notificação via e-mail** com o resumo do pedido.
+✅ Permitir **upload direto para S3 ou R2** (Livewire suporta isso).
+✅ Melhorar a interface com **Livewire Loading States** para feedback ao usuário.
+✅ Utilizar instalação do Laravel com startkit Livewire
+✅ Usar [FluxUI](https://fluxui.dev/) para a UI do formulário
 
-## Stack do projeto
+---
 
-- PHP >= 8.0 (Se quiser usar Laravel não tem problema)
-- MySQL
-- jQuery/Ajax
-- HTML/CSS (Se quiser pode usar Bootstrap ou Tailwind)
-- Ambientalização com Docker
-  
-Os requisitos de front-end não são obrigatórios, pode desenvolver no que se sentir mais confortável e produtivo.
+## 📌 **Critérios de Avaliação**
+🔹 Código limpo e bem estruturado seguindo o **MVC**  
+🔹 Uso correto de **Livewire** para interatividade sem recarregar a página  
+🔹 **Validações backend e frontend** bem implementadas  
+🔹 Organização e boas práticas do Laravel  
+🔹 Uso de **Eloquent** para interação com o banco  
 
-**Importante: O projeto deve seguir a arquitetura MVC.**
+---
 
-Caso opte por não usar Laravel, não tem problema algum usar componentes que facilite a conexão com banco de dados e etc.
+## 🔥 **Como Entregar**
+- Enviar o código pelo **GitHub** (repositório público ou privado com acesso).
 
-Aqui está alguns componentes que recomendo e que podem ajudar:
+---
 
-- Abstração de Banco de dados: https://github.com/robsonvleite/datalayer
-- Rotas: https://github.com/robsonvleite/router
-- Upload de arquivos: https://github.com/robsonvleite/uploader ou usar o **SDK da AWS** e já fazer upload em um bucket no S3 🙂
+🎯 **Objetivo do teste**: Avaliar sua capacidade de trabalhar com **Laravel 12, Livewire, Tailwind**, interações assíncronas e boas práticas de desenvolvimento.
 
-Boa sorte 😉
+🔹 **Boa sorte!** 🚀
 
 ---
