@@ -1,7 +1,7 @@
-# 🏆 **Desafio Técnico – Laravel 12 + Livewire + Tailwind CSS**
+# 🏆 **Desafio Técnico – Laravel + Livewire + Tailwind CSS**
 
 ## 🎯 **Objetivo**
-Criar uma aplicação web utilizando **Laravel 12, Livewire e Tailwind CSS** que permita aos usuários:
+Criar uma aplicação web utilizando **Laravel, Livewire e Tailwind CSS** que permita aos usuários:
 - Fazer **upload de imagens de documentos** para extração de texto via **OCR**.
 - Selecionar **idiomas de origem e destino** para cotação de tradução.
 - **Calcular e exibir um preço estimado** baseado no número de palavras extraídas.
@@ -11,7 +11,7 @@ Criar uma aplicação web utilizando **Laravel 12, Livewire e Tailwind CSS** que
 
 ## 📌 **Requisitos Técnicos**
 ### 🔹 **Stack do projeto**
-- Laravel **12** com **Livewire**
+- Laravel com **Livewire**
 - Tailwind CSS
 - PostgreSQL ou MySQL
 - Laravel Herd ou Docker (para desenvolvimento local)
@@ -86,7 +86,7 @@ Criar uma aplicação web utilizando **Laravel 12, Livewire e Tailwind CSS** que
 
 ---
 
-🎯 **Objetivo do teste**: Avaliar sua capacidade de trabalhar com **Laravel 12, Livewire, Tailwind**, interações assíncronas e boas práticas de desenvolvimento.
+🎯 **Objetivo do teste**: Avaliar sua capacidade de trabalhar com **Laravel, Livewire, Tailwind**, interações assíncronas e boas práticas de desenvolvimento.
 
 🔹 **Boa sorte!** 🚀
 
