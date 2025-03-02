@@ -65,7 +65,7 @@ Criar uma aplicação web utilizando **Laravel 12, Livewire e Tailwind CSS** que
 
 ## 🚀 **Desafios Extras (Diferencial)**
 ✅ Criar **notificação via e-mail** com o resumo do pedido.
-✅ Permitir **upload direto para S3 ou R2** (Livewire suporta isso).
+✅ Permitir **upload direto para S3, Cloud Storage ou R2** (Livewire suporta isso).
 ✅ Melhorar a interface com **Livewire Loading States** para feedback ao usuário.
 ✅ Utilizar instalação do Laravel com startkit Livewire
 ✅ Usar [FluxUI](https://fluxui.dev/) para a UI do formulário
